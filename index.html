@@ -1,222 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spectre SL</title>
-  <link rel="stylesheet" href="HTML_CSS/RETOMEJORADO.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectre SL</title>
+    <link rel="stylesheet" href="RETO.css">
 </head>
-
 <body>
     <header>
-      <div class="logo">
-        <img src="FOTOS/SPECTRE_Logo.png" alt="logo" />
-        <h1 class="nombre-empresa">SPECTRE</h1>
-      </div>
+        
+        <div class="logo">
+            <img src="https://github.com/hodeiprieto/spectresl/blob/main/FOTOS/SPECTRE_Logo.png?raw=true" alt=" logo">
+            <h1 class="nombre-empresa"> SPECTRE</h1>
+        </div>
+        
     </header>
-
+    <h1>Hola V2</h1>
     <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#Nuestros-Servicios">Nuestros Servicios</a>
-      <a href="#tarifas">Tarifas</a>
-      <a href="HTML_CSS/PRODUCTOS.html">Productos</a>
-      <a href="HTML_CSS/FORMULARIO.html">Registro</a>
-      <a href="#Contacto">Contacto</a>
+        <a href="index.html">Inicio</a>
+        <a href=#Nuestros-Servicios>Nuestros Servicios </a>
+        <a href="#productos">Productos</a>
+        <a href="formulario.html">Registro</a>
+        <a href="#Contacto">Contacto</a>
     </nav>
 
+   
     <section class="hero" id="inicio">
-      <h2>Donde los ordenadores vuelven a la vida</h2>
-      <p>Conoce los productos reacondicionados al mejor precio</p>
-      <button onclick="window.location.href='HTML_CSS/PRODUCTOS.html'">VER PRODUCTOS</button>
-
+        <h2>Donde los ordenadores vuelven a la vida</h2>
+        <p>Soluciones creativas, efectivas y adaptadas a ti</p>
+        <button>Descubre más</button>
     </section>
-
-    <section id="Nuestros-Servicios" class="seccion">
-      <h2>Nuestros Servicios</h2>
-
-      <div class="contenedor servicios-grid">
-        <div class="caja servicio">
-          <img src="FOTOS/images (1).jpg" alt="Reutilización Tech" />
-          <h3>Reutilización Tech</h3>
-        </div>
-
-        <div class="caja servicio">
-          <img src="FOTOS/images (2).jpg" alt="Reparación Técnica" />
-          <h3>Reparación Técnica</h3>
-        </div>
-
-        <div class="caja servicio">
-          <img src="FOTOS/Digitalizacion-de-Procesos.jpg" alt="Servicios Eficientes" />
-          <h3>Servicios Eficientes</h3>
-        </div>
-
-        <div class="caja servicio">
-          <img src="FOTOS/Tecnologia-y-Sostenibilidad-1.jpg" alt="Sostenibilidad Real" />
-          <h3>Sostenibilidad Real</h3>
-        </div>
-      </div>
-    </section>
-
-    <section class="contenedor_2" id="sobre-nosotros">
-      <div class="nosotros">
-        <div class="info">
-          <h2>Sobre Nosotros</h2>
-          <p>En Spectre creemos que la tecnología no debería tener fecha de caducidad.</p>
-          <p>Reutilizamos, reparamos y mejoramos equipos para darles una segunda vida y ayudar a que la innovación también sea sostenible.</p>
-          <p>Somos una startup que mezcla pasión por la tecnología, conciencia ecológica y ganas de cambiar las reglas del juego.</p>
-        </div>
-
-        <div class="nosotrosimg">
-          <img src="FOTOS/Administraritza-3.jpg" alt="instalaciones" />
-        </div>
-      </div>
-    </section>
-
-    <section class="seccion" id="tarifas">
-      <h2>TARIFAS</h2>
-
-      <div class="tarifas-wrap">
-        <table class="tabla-tarifas">
-          <thead>
-            <tr>
-              <th>Servicio</th>
-              <th>Incluye</th>
-              <th>Desde</th>
-              <th>Tiempo</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Diagnóstico</td>
-              <td>Revisión completa + informe</td>
-              <td>19,99€</td>
-              <td>24-48h</td>
-            </tr>
-            <tr>
-              <td>Reparación básica</td>
-              <td>Limpieza + ajustes + optimización</td>
-              <td>39,99€</td>
-              <td>1-3 días</td>
-            </tr>
-            <tr>
-              <td>Reparación avanzada</td>
-              <td>Hardware / software (según caso)</td>
-              <td>79,99€</td>
-              <td>3-7 días</td>
-            </tr>
-            <tr>
-              <td>Reutilización / puesta a punto</td>
-              <td>Mejora de rendimiento y vida útil</td>
-              <td>49,99€</td>
-              <td>2-5 días</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p class="nota-tarifas">*Precios orientativos. Pueden variar según el estado del equipo y piezas necesarias.</p>
-      </div>
-    </section>
-
 
     
-
-
-      <section class="juego">
-        <h3>GANANOS A PIEDRA, PAPEL O TIJERA</h3>
-        
-        <button id="jugar">Jugar</button>
-        <p id="resultado"></p>
-        <ul id="historial"></ul>
-        <script>
-              let victorias = 0;
-              let derrotas = 0;
-              let empates = 0;
-
-              let opciones = ["piedra","papel","tijera"];
-              let turnoCPU = 0;
-
-              let btn = document.getElementById("jugar");
-              let resultado = document.getElementById("resultado");
-              let historial = document.getElementById("historial");
-
-              btn.onclick = function(){
-
-                let jugador = prompt("Elige: piedra, papel o tijera");
-
-                if(jugador == null) return;
-
-                jugador = jugador.toLowerCase();
-
-                if(jugador != "piedra" && jugador != "papel" && jugador != "tijera"){
-                  alert(" Escribe: piedra, papel o tijera");
-                  return;
-                }
-
-                let cpu = opciones[turnoCPU];
-                turnoCPU = turnoCPU + 1;
-                if(turnoCPU == 3) turnoCPU = 0;
-
-                let texto = "Tú: " + jugador + " | CPU: " + cpu + " -> ";
-
-                if(jugador == cpu){
-                  empates = empates + 1;
-                  texto = texto + "EMPATE ❤️‍🔥";
-                }
-                else if(
-                  (jugador == "piedra" && cpu == "tijera") ||
-                  (jugador == "papel" && cpu == "piedra") ||
-                  (jugador == "tijera" && cpu == "papel")
-                ){
-                  victorias = victorias + 1;
-                  texto = texto + "GANAS 😎";
-                }
-                else{
-                  derrotas = derrotas + 1;
-                  texto = texto + "PIERDES 🤫";
-                }
-
-                resultado.textContent =
-                  "Victorias: " + victorias + " | Derrotas: " + derrotas + " | Empates: " + empates;
-
+    <section id="Nuestros-Servicios">
+        <h2 >NUESTROS SERVICIOS</h2>
+        <div class="contenedor">
+            <div class="caja">
+                <img src="https://github.com/hodeiprieto/spectresl/blob/main/FOTOS/images%20(1).jpg?raw=true" alt="Servicio 1">
+                <h3>  Reutilización Tech</h3>
                 
-                let li = document.createElement("li");
-                li.textContent = texto;
-
+            </div>
+            <div class="caja">
+                <img src="https://github.com/hodeiprieto/spectresl/blob/main/FOTOS/images%20(2).jpg?raw=true" alt="Servicio 2">
+                <h3>Reparación Técnica</h3>
+           
+            </div>
+            <div class="caja">
+                <img src="https://github.com/hodeiprieto/spectresl/blob/main/FOTOS/Digitalizacion-de-Procesos.jpg?raw=true" alt="servicio 3">
+                <h3>Servicios Eficientes</h3>
                 
-                let b = document.createElement("button");
-                b.textContent = "Eliminar";
-                b.style.marginLeft = "10px";
+            </div>
+            <div class="caja">
+                <img src="https://github.com/hodeiprieto/spectresl/blob/main/FOTOS/Tecnologia-y-Sostenibilidad-1.jpg?raw=true" alt="Servicio 4">
+                <h3>Sostenibilidad Real</h3>
+                
+            </div>
+        </div>
+    </section>
 
-                b.onclick = function(){
-                  li.remove();
-                };
+    
+    <section class="contenedor_2">
+       <h2>SOBRE NOSOTROS</h2>
+       <div class="nosotros">
+            <div class="info">
+               <p>En Spectre creemos que la tecnología no debería tener fecha de caducidad.</p>
+               <p>Reutilizamos, reparamos y mejoramos equipos para darles una segunda vida y ayudar a que la innovación también sea sostenible.</p>
+               <p>Somos una startup que mezcla pasión por la tecnología, conciencia ecológica y ganas de cambiar las reglas del juego.</p>
+             </div>
 
-                li.appendChild(b);
-            
-                historial.appendChild(li);
-                }
-
-        </script>
-      </JUEGO>
-
-
-
-
-
-
-
+           <div class="nosotrosimg">
+             <img src="https://github.com/hodeiprieto/spectresl/blob/main/FOTOS/Administraritza-3.jpg?raw=true" alt="instalaciones">
+         </div>
+      </div>
+    </section>
+ 
 
 
 
-  
 
-  <footer id="Contacto">
-    <p>
-      <a href="mailto:contacto@spectre.com" title="Mandar correo a contacto@spectre.com">contacto@spectre.com</a>
-      | +34 600 123 456
-    </p>
-    <p>© 2025 SPECTRE Todos los derechos reservados.</p>
-  </footer>
+
+
+    <h2 class="titulo-productos">NUESTROS PRODUCTOS</h2>
+
+
+    <section class= "productos" id="productos">
+         
+         
+            <div class="caja">
+                <img src="https://github.com/hodeiprieto/spectresl/blob/main/FOTOS/DISCODURO.jpg?raw=true" alt="prod 1">
+                <h3> Discos Duros </h3>
+                <p> Desde 49,99€</p>
+                
+            </div>
+
+            <div class="caja">
+                <img src="https://github.com/hodeiprieto/spectresl/blob/main/FOTOS/ORDENADOR.jpg?raw=true" alt="prod 2">
+                <h3>Portátiles</h3>
+                <p>Desde 180,00€</p>
+           
+            </div>
+            <div class="caja">
+                <img src="https://github.com/hodeiprieto/spectresl/blob/main/FOTOS/TORRE.jpg?raw=true" alt="prod 3">
+                <h3>Ordenador de Torre</h3>
+                <p>Desde 30,00€</p>
+                
+            </div>
+            <div class="caja">
+                <img src="https://github.com/hodeiprieto/spectresl/blob/main/FOTOS/pc.jpg?raw=true" alt="prod 4">
+                <h3>PC Gaming</h3>
+                <p>Desde 550,00€</p>
+                
+            </div>
+    
+    </section>
+
+
+
+    <footer id="Contacto">
+
+        <p> <a href="mailto:contacto@spectre.com" title="Mandar correo a contacto@spectre.com">contacto@spectre.com</a> |   +34 600 123 456</p>
+        <p>© 2025 SPECTRE  Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
 

@@ -1,0 +1,172 @@
+body{margin: 0%;}
+
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  color:#34495E;
+  background:#E9F7EF;
+  margin: 0;
+}
+
+
+header{
+ display: flex;
+ justify-content:space-between;
+ background-color:#2e604a;
+ padding: 15px 10px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align:center;
+    font-size:20px;
+    color: #E9F7EF;
+    gap: 20px;
+
+}
+
+.logo img{ max-width:200px;
+  height:140px;
+  border-radius:20px;}
+
+
+
+nav{
+  background-color:#1E8449;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+nav a{
+  color:white;
+  text-decoration:none;
+  padding:20px 30px;
+  display:block;
+  border-radius:8px;
+}
+nav a:hover{
+  background-color:#2ECC71;
+}
+
+
+.formulario{
+  min-height: 80vh;          
+  display: grid;              
+  place-items: center;         
+  padding: 24px;
+}
+
+.formulario h2{
+  color:#1E8449;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.formulario form{
+  background-color:#D5F5E3;
+  color:#1E8449;
+  border-radius:10px;
+  padding: 24px 28px;
+  width: 520px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+
+.formulario form label{
+  display:block;
+  margin: 10px 0 6px;
+}
+
+.formulario form input[type="text"],
+.formulario form input[type="email"]{
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #b8e6cc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.formulario form .espacio{
+  height: 12px; 
+}
+
+.formulario form button{
+  margin-top: 16px;
+  padding: 12px 16px;
+  
+  border-radius: 8px;
+  background: #1E8449;
+  color: white;
+  
+}
+.formulario form button:hover{ background:#2ECC71; }
+
+footer{
+    background-color:#2e604a;
+    text-align: center;
+    padding: 30px 30px;
+    color: white;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .logo {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+    gap: 10px;
+  }
+
+  .logo img {
+    max-width: 120px;
+    height: 90px;
+  }
+
+  nav a {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+
+  .formulario form {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .formulario form {
+    width: 100%;
+    padding: 16px;
+    margin-left: -12px; 
+  }
+
+
+  .logo {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    padding: 10px 14px;
+    width: 100%;
+    text-align: center;
+  }
+
+
+}
+

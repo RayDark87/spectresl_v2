@@ -8,7 +8,7 @@
         $port = $dbopts["port"];
         $user = $dbopts["user"];
         $pass = $dbopts["pass"];
-        $name = ltrim($dbopts["parh"], '/');
+        $name = ltrim($dbopts["part"], '/');
 
         try {
             $pdo = new PDO("pgsql:host=$host;port=$port;dbname=$name", $user, $pass);

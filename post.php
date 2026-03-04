@@ -91,6 +91,8 @@
             };
         } catch (PDOException $e) {
             echo "Error al insertar en Postgres: " . $e->getMessage();
+
+            if ($e->getCode() == 23505){
             echo '<!DOCTYPE html>
                     <html lang="es">
                     <head>
@@ -157,6 +159,7 @@
                         
                     </body>
                     </html>';
+                }
         }
 
     } else {

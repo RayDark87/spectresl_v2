@@ -13,7 +13,7 @@
 
         try {
             $sql = "INSERT INTO registro (nombre, email, contrasenia) 
-                    VALUES (?, ?, ?, ?, ?)";
+                    VALUES (?, ?, ?)";
             
             $stmt = $conexion->prepare($sql);
 

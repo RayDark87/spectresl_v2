@@ -17,6 +17,10 @@
             
             $stmt = $conexion->prepare($sql);
 
+            // Esto te mostrará en pantalla qué está intentando enviar PHP
+// temporalmente para debug
+// print_r([$nombre, $email, $contrasenia]);
+
             if ($stmt->execute([$nombre, $email, $contrasenia])) {
                 echo '<!DOCTYPE html>
             <html lang="es">

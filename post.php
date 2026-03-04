@@ -22,6 +22,12 @@
             $stmt = $conexion->prepare($sql);
 
             if ($stmt->execute([$nombre, $email, $tipo, $asunto, $mensaje])) {
+                echo "        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: radial-gradient(#111827, #0a0d14);
+            color:#eef1f6;
+            line-height:1.6;
+        }"
                 echo "Registro guardado correctamente en la nube.<br><br>";
                 echo "<a href='FORM2.html'>Volver</a> | ";
                 echo "<a href='LISTARSUGERENCIAS.php'>Ver registros</a>";

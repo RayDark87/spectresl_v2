@@ -4,24 +4,22 @@
     if (
         isset($_POST["nombre"]) &&
         isset($_POST["email"]) &&
-        isset($_POST["contrasenia"])
+        isset($_POST["pass"])
     ) {
 
         $nombre = $_POST["nombre"];
         $email = $_POST["email"];
-        $contrasenia = $_POST["contrasenia"];
+        $pass = $_POST["pass"];
+
+        $passHash = password_hash($pass, PASSWORD_DEFAULT);
 
         try {
-            $sql = "INSERT INTO registro (nombre, email, contrasenia) 
+            $sql = "INSERT INTO registro (nombre, email, pass ) 
                     VALUES (?, ?, ?)";
             
             $stmt = $conexion->prepare($sql);
 
-            // Esto te mostrará en pantalla qué está intentando enviar PHP
-// temporalmente para debug
-// print_r([$nombre, $email, $contrasenia]);
-
-            if ($stmt->execute([$nombre, $email, $contrasenia])) {
+            if ($stmt->execute([$nombre, $email, $passHash])) {
                 echo '<!DOCTYPE html>
                         <html lang="es">
                         <head>

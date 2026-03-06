@@ -1,0 +1,29 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(#111827, #0a0d14);
+  line-height:1.6;
+  justify-content: center;
+}
+
+.hero{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10%;
+  width: 60%;
+  background-color: white;
+}
+
+.hero 
+
+.hero img{
+  width: 20%;
+}
+

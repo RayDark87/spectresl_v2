@@ -68,6 +68,21 @@ nav a:hover{
   transform: translateY(-4px);
 }
 
+.msg{
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  margin: 40px;
+  border-radius: 15px;
+  border: solid 1px rgba(255, 255, 255, 0.16);
+  background:linear-gradient(135deg,#0f1522,#0b1020);
+
+}
+
+.msg p{
+  color: #c9b27a;
+}
+
 form{
   width:550px;
   max-width:92%;

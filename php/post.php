@@ -1,0 +1,5 @@
+<?php
+
+// Datos de conexion
+
+?>
